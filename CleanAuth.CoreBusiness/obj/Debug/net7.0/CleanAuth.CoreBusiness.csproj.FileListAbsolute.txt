@@ -1,0 +1,12 @@
+C:\Users\DELL\source\repos\CleanAuth\CleanAuth.CoreBusiness\bin\Debug\net7.0\CleanAuth.CoreBusiness.deps.json
+C:\Users\DELL\source\repos\CleanAuth\CleanAuth.CoreBusiness\bin\Debug\net7.0\CleanAuth.CoreBusiness.dll
+C:\Users\DELL\source\repos\CleanAuth\CleanAuth.CoreBusiness\bin\Debug\net7.0\CleanAuth.CoreBusiness.pdb
+C:\Users\DELL\source\repos\CleanAuth\CleanAuth.CoreBusiness\obj\Debug\net7.0\CleanAuth.CoreBusiness.csproj.AssemblyReference.cache
+C:\Users\DELL\source\repos\CleanAuth\CleanAuth.CoreBusiness\obj\Debug\net7.0\CleanAuth.CoreBusiness.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\source\repos\CleanAuth\CleanAuth.CoreBusiness\obj\Debug\net7.0\CleanAuth.CoreBusiness.AssemblyInfoInputs.cache
+C:\Users\DELL\source\repos\CleanAuth\CleanAuth.CoreBusiness\obj\Debug\net7.0\CleanAuth.CoreBusiness.AssemblyInfo.cs
+C:\Users\DELL\source\repos\CleanAuth\CleanAuth.CoreBusiness\obj\Debug\net7.0\CleanAuth.CoreBusiness.csproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\CleanAuth\CleanAuth.CoreBusiness\obj\Debug\net7.0\CleanAuth.CoreBusiness.dll
+C:\Users\DELL\source\repos\CleanAuth\CleanAuth.CoreBusiness\obj\Debug\net7.0\refint\CleanAuth.CoreBusiness.dll
+C:\Users\DELL\source\repos\CleanAuth\CleanAuth.CoreBusiness\obj\Debug\net7.0\CleanAuth.CoreBusiness.pdb
+C:\Users\DELL\source\repos\CleanAuth\CleanAuth.CoreBusiness\obj\Debug\net7.0\ref\CleanAuth.CoreBusiness.dll

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "3YI//TnwZAgxsCmG/gWL+JK2NXPyF+Ewu32sb+s9wGo=",
+  "Source": "CleanAuth.WebApi",
+  "BasePath": "_content/CleanAuth.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

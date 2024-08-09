@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "lTpCafzqQzkAeEgl9y4OhXkCjf9XGondtk8TPIbpGlZLS+2/7S3NzASDsbtnI+glLeFoOcxa1K6zqAFymTPJbg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\DELL\\source\\repos\\CleanAuth\\CleanAuth.CoreBusiness\\CleanAuth.CoreBusiness.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\DELL\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33712.159
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanAuth.WebApi", "CleanAuth\CleanAuth.WebApi.csproj", "{51A6832F-E0FB-46D0-8D31-F75BE45BCD61}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FEBEE8DD-3279-4AED-9F1C-0D996F0A0BAE} = {FEBEE8DD-3279-4AED-9F1C-0D996F0A0BAE}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanAuth.CoreBusiness", "CleanAuth.CoreBusiness\CleanAuth.CoreBusiness.csproj", "{A254932E-7D40-42AC-84F4-ACC736820FA0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanAuth.UseCases", "CleanAuth.UseCases\CleanAuth.UseCases.csproj", "{FEBEE8DD-3279-4AED-9F1C-0D996F0A0BAE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanAuth.Infrastructure", "CleanAuth.Infrastructure\CleanAuth.Infrastructure.csproj", "{E00CDAD4-A72C-4884-BC24-827E9EBC252D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FEBEE8DD-3279-4AED-9F1C-0D996F0A0BAE} = {FEBEE8DD-3279-4AED-9F1C-0D996F0A0BAE}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51A6832F-E0FB-46D0-8D31-F75BE45BCD61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51A6832F-E0FB-46D0-8D31-F75BE45BCD61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51A6832F-E0FB-46D0-8D31-F75BE45BCD61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51A6832F-E0FB-46D0-8D31-F75BE45BCD61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A254932E-7D40-42AC-84F4-ACC736820FA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A254932E-7D40-42AC-84F4-ACC736820FA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A254932E-7D40-42AC-84F4-ACC736820FA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A254932E-7D40-42AC-84F4-ACC736820FA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEBEE8DD-3279-4AED-9F1C-0D996F0A0BAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEBEE8DD-3279-4AED-9F1C-0D996F0A0BAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEBEE8DD-3279-4AED-9F1C-0D996F0A0BAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEBEE8DD-3279-4AED-9F1C-0D996F0A0BAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E00CDAD4-A72C-4884-BC24-827E9EBC252D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E00CDAD4-A72C-4884-BC24-827E9EBC252D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E00CDAD4-A72C-4884-BC24-827E9EBC252D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E00CDAD4-A72C-4884-BC24-827E9EBC252D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3319B4AF-DAE1-493F-8F30-8E692D0D3028}
+	EndGlobalSection
+EndGlobal

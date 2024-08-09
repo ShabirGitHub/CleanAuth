@@ -1,0 +1,15 @@
+C:\Users\DELL\source\repos\CleanAuth\CleanAuth.UseCases\bin\Debug\net7.0\CleanAuth.UseCases.deps.json
+C:\Users\DELL\source\repos\CleanAuth\CleanAuth.UseCases\bin\Debug\net7.0\CleanAuth.UseCases.dll
+C:\Users\DELL\source\repos\CleanAuth\CleanAuth.UseCases\bin\Debug\net7.0\CleanAuth.UseCases.pdb
+C:\Users\DELL\source\repos\CleanAuth\CleanAuth.UseCases\bin\Debug\net7.0\CleanAuth.CoreBusiness.dll
+C:\Users\DELL\source\repos\CleanAuth\CleanAuth.UseCases\bin\Debug\net7.0\CleanAuth.CoreBusiness.pdb
+C:\Users\DELL\source\repos\CleanAuth\CleanAuth.UseCases\obj\Debug\net7.0\CleanAuth.UseCases.csproj.AssemblyReference.cache
+C:\Users\DELL\source\repos\CleanAuth\CleanAuth.UseCases\obj\Debug\net7.0\CleanAuth.UseCases.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\source\repos\CleanAuth\CleanAuth.UseCases\obj\Debug\net7.0\CleanAuth.UseCases.AssemblyInfoInputs.cache
+C:\Users\DELL\source\repos\CleanAuth\CleanAuth.UseCases\obj\Debug\net7.0\CleanAuth.UseCases.AssemblyInfo.cs
+C:\Users\DELL\source\repos\CleanAuth\CleanAuth.UseCases\obj\Debug\net7.0\CleanAuth.UseCases.csproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\CleanAuth\CleanAuth.UseCases\obj\Debug\net7.0\CleanAuth.UseCases.csproj.CopyComplete
+C:\Users\DELL\source\repos\CleanAuth\CleanAuth.UseCases\obj\Debug\net7.0\CleanAuth.UseCases.dll
+C:\Users\DELL\source\repos\CleanAuth\CleanAuth.UseCases\obj\Debug\net7.0\refint\CleanAuth.UseCases.dll
+C:\Users\DELL\source\repos\CleanAuth\CleanAuth.UseCases\obj\Debug\net7.0\CleanAuth.UseCases.pdb
+C:\Users\DELL\source\repos\CleanAuth\CleanAuth.UseCases\obj\Debug\net7.0\ref\CleanAuth.UseCases.dll
