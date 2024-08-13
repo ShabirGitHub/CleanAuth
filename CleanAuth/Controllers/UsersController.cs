@@ -14,12 +14,14 @@ namespace CleanAuth.WebApi.Controllers
         private readonly IAuthenticateUseCase _authenticateUserCase;
         private readonly ISignupUseCase _signupUseCase;
         private readonly IBalanceUseCase _balanceUseCase;
+        private readonly ILogger<UsersController> _logger;
 
-        public UsersController(IAuthenticateUseCase authenticateUserCase, ISignupUseCase signupUseCase, IBalanceUseCase balanceUseCase)
+        public UsersController(IAuthenticateUseCase authenticateUserCase, ISignupUseCase signupUseCase, IBalanceUseCase balanceUseCase, ILogger<UsersController> logger)
         {
             _authenticateUserCase = authenticateUserCase;
             _signupUseCase = signupUseCase;
             _balanceUseCase = balanceUseCase;
+            _logger = logger;
         }
 
         [HttpPost("SignUp")]
@@ -34,17 +36,18 @@ namespace CleanAuth.WebApi.Controllers
                 await _signupUseCase.ExecuteAsync(request);
                 return Ok();
             }
-
             catch (DomainException ex)
             {
+                _logger.LogWarning("Domain exception occurred during SignUp for user {Username}: {Message}", request.Username, ex.Message);
                 return BadRequest(new { Message = ex.Message });
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, "An unexpected error occurred during SignUp for user {Username}", request.Username);
                 return StatusCode(500, new { Message = ex.Message });
             }
         }
-        
+
         [HttpPost("Authenticate")]
         public async Task<IActionResult> Authenticate([FromBody] UserLoginRequest request)
         {
@@ -61,22 +64,22 @@ namespace CleanAuth.WebApi.Controllers
             }
             catch (ValidationException ex)
             {
-                // Handle validation errors
+                _logger.LogWarning("Validation error occurred during authentication for user {Username}: {Message}", request.Username, ex.Message);
                 return BadRequest(new { Message = ex.Message, Details = ex.InnerException?.Message });
             }
             catch (UnauthorizedAccessException ex)
             {
-                // Handle authentication errors
-                return Unauthorized(new { Message = ex.Message });
+                _logger.LogWarning("Unauthorized access during authentication for user {Username}: {Message}", request.Username, ex.Message);
+                return Unauthorized(new { Message = ex.Message});
             }
             catch (ApplicationException ex)
             {
-                // Handle known application exceptions
+                _logger.LogError(ex, "Application error during authentication for user {Username}", request.Username);
                 return StatusCode(500, new { Message = ex.Message });
             }
             catch (Exception ex)
             {
-                // Handle unexpected errors
+                _logger.LogError(ex, "An unexpected error occurred during authentication for user {Username}", request.Username);
                 return StatusCode(500, new { Message = "An unexpected error occurred. Please try again later.", Details = ex.Message });
             }
         }
@@ -91,12 +94,12 @@ namespace CleanAuth.WebApi.Controllers
             }
             catch (UnauthorizedAccessException ex)
             {
-                // Return a 401 Unauthorized response if the token is invalid or expired
+                _logger.LogWarning("Unauthorized access while retrieving balance {Message}", ex.Message);
                 return Unauthorized(new { Message = ex.Message });
             }
             catch (Exception ex)
             {
-                // Handle unexpected errors
+                _logger.LogError(ex, "An unexpected error occurred while retrieving balance");
                 return StatusCode(500, new { Message = "An unexpected error occurred. Please try again later.", Details = ex.Message });
             }
         }

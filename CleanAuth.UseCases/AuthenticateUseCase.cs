@@ -4,6 +4,7 @@ using CleanAuth.UseCases.Interfaces;
 using CleanAuth.UseCases.Mappings;
 using CleanAuth.UseCases.RepositoryPlugins;
 using CleanAuth.UseCases.ServicesPlugins;
+using Microsoft.Extensions.Logging;
 using System.ComponentModel.DataAnnotations;
 
 namespace CleanAuth.UseCases
@@ -13,12 +14,14 @@ namespace CleanAuth.UseCases
         private readonly IUserRepository _userRepository;
         private readonly IJwtService _jwtService;
         private readonly IUnitOfWorkFactory _uowFactory;
+        private readonly ILogger<AuthenticateUseCase> _logger;
 
-        public AuthenticateUseCase(IUserRepository userRepository, IJwtService jwtService, IUnitOfWorkFactory uowFactory)
+        public AuthenticateUseCase(IUserRepository userRepository, IJwtService jwtService, IUnitOfWorkFactory uowFactory, ILogger<AuthenticateUseCase> logger)
         {
-            _userRepository = userRepository;
-            _jwtService = jwtService;
+            _userRepository = userRepository ?? throw new ArgumentNullException(nameof(userRepository));
+            _jwtService = jwtService ?? throw new ArgumentNullException(nameof(jwtService));
             _uowFactory = uowFactory ?? throw new ArgumentNullException(nameof(uowFactory));
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
         public async Task<UserLoginResponse> ExecuteAsync(UserLoginRequest requestDto)
@@ -77,15 +80,18 @@ namespace CleanAuth.UseCases
             }
             catch (ArgumentException ex)
             {
+                _logger.LogWarning(ex, "Validation failed during login for user {Username}.", requestDto.Username);
                 throw new ValidationException("Request validation failed.", ex);
             }
             catch (UnauthorizedAccessException ex)
             {
+                _logger.LogWarning(ex, "Unauthorized access during login for user {Username}.", requestDto.Username);
                 throw new UnauthorizedAccessException("Invalid credentials.", ex);
             }
             catch (Exception ex)
             {
                 // Handle unexpected exceptions
+                _logger.LogError(ex, "An unexpected error occurred during login for user {Username}.", requestDto.Username);
                 throw new ApplicationException("An unexpected error occurred during login.", ex);
             }
         }
